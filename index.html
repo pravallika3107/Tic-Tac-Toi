@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blink Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="watermark">@APK</div>
+    <div class="container">
+        <h1>Blink Tac Toe</h1>
+        <div id="setup">
+          <p>Select One Emoji Per Player</p>
+          <div>
+            <label>Player 1:
+              <select id="player1-emoji">
+                <option value="🐶">🐶 Dog</option>
+                <option value="🐱">🐱 Cat</option>
+                <option value="🐵">🐵 Monkey</option>
+                <option value="🐰">🐰 Rabbit</option>
+                <option value="🍕">🍕 Pizza</option>
+                <option value="🍟">🍟 Fries</option>
+                <option value="🍔">🍔 Burger</option>
+                <option value="🍩">🍩 Donut</option>
+                <option value="⚽️">⚽️ Soccer</option>
+                <option value="🏀">🏀 Basketball</option>
+                <option value="🏈">🏈 Football</option>
+                <option value="🎾">🎾 Tennis</option>
+              </select>
+            </label>
+            <label>Player 2:
+              <select id="player2-emoji">
+                <option value="🐶">🐶 Dog</option>
+                <option value="🐱">🐱 Cat</option>
+                <option value="🐵">🐵 Monkey</option>
+                <option value="🐰">🐰 Rabbit</option>
+                <option value="🍕">🍕 Pizza</option>
+                <option value="🍟">🍟 Fries</option>
+                <option value="🍔">🍔 Burger</option>
+                <option value="🍩">🍩 Donut</option>
+                <option value="⚽️">⚽️ Soccer</option>
+                <option value="🏀">🏀 Basketball</option>
+                <option value="🏈">🏈 Football</option>
+                <option value="🎾">🎾 Tennis</option>
+              </select>
+            </label>
+          </div>
+          <button class="button" onclick="startGame()">Start Game</button>
+        </div>
+    
+        <div id="game" style="display:none">
+          <div class="info" id="turn-info"></div>
+          <div class="board" id="board"></div>
+          <button class="button" onclick="resetGame()">Play Again</button>
+        </div>
+    
+        <div id="help">
+          <h3>How to Play:</h3>
+          <ul>
+            <li>Each player selects one emoji before starting.</li>
+            <li>Players take turns placing their selected emoji.</li>
+            <li>Only 3 emojis per player can be active. The oldest disappears automatically.</li>
+            <li>You can’t place a new emoji where your oldest one was.</li>
+            <li>First to align 3 emojis wins!</li>
+          </ul>
+        </div>
+      </div>
+  <script src="script.js"></script>
+</body>
+</html>
